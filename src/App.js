@@ -8,6 +8,11 @@ import Body2 from './Component/Body2';
 import Body3 from './Component/Body3';
 import Footer from './Component/Footer';
 import Vehicle from './Component/Vehicle/Vehicle';
+import Registration from './Component/Registration';
+import Login from './Component/Login';
+import LocationDetails from './Component/LocationDetails';
+import AdminVehicleForm from './Component/Admin/AdminVehicleForm';
+import AdminVehicle from './Component/Admin/AdminVehicle';
 
 
 
@@ -25,11 +30,35 @@ const route=createBrowserRouter([
     </>
   },
   {
-    path:"/vehicle",
+    path:"/vehicles",
     element:<>
     <Vehicle/>
     </>
+  },
+  {
+    path:"/registration",
+    element:<><Navbar/><Registration/></>
+  },
+  {
+    path:"/login",
+    element:<Login/>
+  },
+  {
+    path:"/locationDetails",
+    element:<>
+     <Navbar/>
+    <LocationDetails/>
+    <Footer/>
+    </>
+  },
+  {
+    path:"/vehicle-admin",
+    element:<>
+    <Navbar/>
+   <AdminVehicle/>
+    </>
   }
+ 
   
 ])
 

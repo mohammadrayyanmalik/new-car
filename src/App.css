@@ -89,7 +89,7 @@ nav {
   position: fixed;
   isolation: isolate;
   width: 100%;
-  z-index: 9;
+  z-index: 1;
 }
 
 .nav__header {
@@ -579,3 +579,302 @@ header {
     padding: 1.5rem;
   }
 }
+
+/* vehicles Start */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Consistent spacing between cards */
+  padding: 20px; /* Add padding around container */
+  
+}
+
+.card {
+height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  width: 300px; /* Slightly smaller width */
+  background-color: white; /* Add white background */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slight scale on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.card-image {
+  overflow: hidden;
+  height: 200px; /* Fixed height for images */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  display: block;
+}
+
+.card-details {
+  padding: 15px;
+  flex: 1; /* Allow details to take up available space */
+}
+
+.card-title { /* Renamed for clarity */
+  font-weight: 600; /* Slightly bolder */
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.card-details p {
+  margin-bottom: 5px; /* Reduced spacing between paragraphs */
+  font-size: 0.95em;
+  color: #555; /* Slightly darker text */
+}
+
+.card-pricing {
+  padding: 10px 15px;
+  border-top: 1px solid #eee; /* Subtle separator */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.select-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.select-button:hover {
+  background-color: #0056b3;
+}
+
+/* vehicles End */
+
+
+
+/* Login form start */
+
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #e65c00;
+}
+.register-link {
+  margin-top: 15px;
+}
+.register-link a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+.register-link a:hover {
+  text-decoration: underline;
+}
+/* login form end */
+
+/* Registration Start */
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.register{
+
+  position: absolute;
+  right: 1500px;
+  top: 550px;
+
+
+}
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+button:hover {
+  background: #e65c00;
+}
+/*  registration End */
+
+/* location Detials Start */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url('./Image/background\ images.webp'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(224, 218, 218, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  flex: 1;
+  margin: 10px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.form-button {
+  flex: 1 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* location Details css:End */
+
+
+/* AdminVehicleForm  start*/
+.adminVehicleForm{
+  position: absolute;
+  right: 1500px;
+  top: 450px;
+}
+/* adminVehicleForm End */

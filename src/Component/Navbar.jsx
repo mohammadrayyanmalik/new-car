@@ -1,7 +1,11 @@
 import React from 'react'
 import pic from '../Image/logo-dark.png'
+import { useNavigate } from 'react-router-dom'
+import Registration from './Registration';
 
 function Navbar() {
+  const navigate=useNavigate();
+
   return (
     <div>
          <nav>
@@ -23,8 +27,7 @@ function Navbar() {
         <li><a href="#feature">Features</a></li>
         <li><a href="#help">Help</a></li>
         <li>
-          <button class="btn">
-            
+          <button class="btn" onClick={()=>{navigate("/login")}}>
             Login
           </button>
         </li>

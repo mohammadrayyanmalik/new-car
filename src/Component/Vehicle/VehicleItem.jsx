@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Vehicle from "./Vehicle";
 
+
 function VehicleItem({models, type, price, licensePlate, status}) {
 
   const navigte=useNavigate();
@@ -23,7 +24,7 @@ function VehicleItem({models, type, price, licensePlate, status}) {
             </div>
             <div class="card-pricing">
                 
-                <button class="select-button" onClick={()=>{navigte("registration")}}>Select</button>
+                <button class="select-button" onClick={()=>{navigte("")}}>Select</button>
             </div>
         </div>
       </div>

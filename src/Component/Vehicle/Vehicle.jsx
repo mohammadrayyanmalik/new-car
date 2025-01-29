@@ -18,11 +18,16 @@ function Vehicle() {
 
     return (
 
-        <div>
-        
+    <div>
 
-            <div className="row row-cols-1 row-cols-md-4 g-1 pt-5 my-1">
-                {/* Dispalying vehicle: Start */}
+            {/* Admin Vehicle Form */}
+            {/* Admin Vehicle form */}
+
+
+
+         {/* Dispalying vehicle: Start */}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        
 
                 {
                     vehicles.map((v) => {
