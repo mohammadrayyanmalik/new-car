@@ -15,3 +15,28 @@ export const addVehicle=(vehicle)=>{
     .then(data=>data)
 }
 
+export const getVehiclesById=(vehicle_link)=>{
+    return fetch(vehicle_link)
+    .then(data=>data.json())
+    .then(data=>data)
+}
+
+export const deletevehicle=(vehicle_id_link)=>{
+    return fetch (vehicle_id_link,{
+      method:"Delete"})
+      .then((data)=>data.json())
+    .then((data)=>data)
+  
+  }
+
+  export const updateVehicle=(vehicle_id_link,vehicle)=>{
+    return fetch(vehicle_id_link,{
+        method:"PUT",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(vehicle)
+      })
+    //   .then((data) => data.json())
+    //     .then((data) => data);
+  }
+
+

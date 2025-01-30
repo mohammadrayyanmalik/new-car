@@ -582,12 +582,18 @@ header {
 
 /* vehicles Start */
 .card-container {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Center cards horizontally */
   gap: 20px; /* Consistent spacing between cards */
   padding: 20px; /* Add padding around container */
   
+}
+
+.admin-card-container{
+  position: relative;
+  top: 680px;
 }
 
 .card {

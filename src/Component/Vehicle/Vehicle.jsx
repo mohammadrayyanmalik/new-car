@@ -20,8 +20,7 @@ function Vehicle() {
 
     <div>
 
-            {/* Admin Vehicle Form */}
-            {/* Admin Vehicle form */}
+          
 
 
 

@@ -32,6 +32,7 @@ const route=createBrowserRouter([
   {
     path:"/vehicles",
     element:<>
+    <Navbar/>
     <Vehicle/>
     </>
   },
@@ -57,7 +58,8 @@ const route=createBrowserRouter([
     <Navbar/>
    <AdminVehicle/>
     </>
-  }
+  },
+
  
   
 ])
