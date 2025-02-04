@@ -591,13 +591,15 @@ header {
   
 }
 
+
+
 .admin-card-container{
   position: relative;
-  top: 680px;
+  top: 550px;
 }
 
 .card {
-height: 400px;
+
   display: flex;
   flex-direction: column;
   border: 1px solid #ddd;
@@ -884,3 +886,27 @@ button:hover {
   top: 450px;
 }
 /* adminVehicleForm End */
+
+/* admin vehicle sorting start */
+.sortinglist{
+  width:200px;
+  margin-left: 80px;
+ 
+}
+/* admin vehicle sorting end */
+
+/* admin vehicle numberOfVehicleButton start*/
+.numberOfVehicleButton{
+  width: 200px;
+  margin-left: 80px;
+  background-color:#007bff ;
+}
+/* admin vehicle numberOfVehicleButton End */
+
+/* search query Start */
+.searchQuery{
+  width: 200px;
+  margin-left: 80px;
+}
+/* searchQuery End */
+

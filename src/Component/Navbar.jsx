@@ -11,7 +11,7 @@ function Navbar() {
          <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#" class="nav__logo">
+          <a href="#" class="nav__logo" onClick={()=>{navigate("/")}}>
             <img src="assets/logo-light.png" alt="logo" class="logo-light" />
             <img src={pic} alt="logo" class="logo-dark" />
             Unique
@@ -22,10 +22,10 @@ function Navbar() {
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#car">Cars</a></li>
-        <li><a href="#feature">Features</a></li>
-        <li><a href="#help">Help</a></li>
+        <li><a href="#about" onClick={()=>{navigate("/about-us")}}>About Us</a></li>
+        <li><a href="#car" onClick={()=>{navigate("/vehicles")}}>Vehicles</a></li>
+        <li><a href="#feature" onClick={()=>{navigate("/registration")}}>Registration</a></li>
+        <li><a href="#help" onClick={()=>{navigate("/vehicle-admin")}}>Admin</a></li>
         <li>
           <button class="btn" onClick={()=>{navigate("/login")}}>
             Login

@@ -32,12 +32,12 @@ function AdminVehicleItem({models, type, price, licensePlate, status,vehicle_lin
     <div>
       <div class="card-container admin-card-container">
       <div class="card">
-            <div class="card-image">
-                {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg/1200px-2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg" alt="Wagon R"/> */}
-            </div>
+      
             <div class="card-details">
+            <img src={vehicle_link+"/image"} class="card-img-top vehicleImage" alt="..." />
                 <h3>Vehicle type: {type}</h3>
                 <p>Models :{models}</p>
+
                 <p>Vehicle Number: {licensePlate}</p>
                 <p>Status: {status}</p>
                 <p>Includes Toll, State Tax & GST</p>

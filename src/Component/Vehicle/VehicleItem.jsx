@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Vehicle from "./Vehicle";
 
 
-function VehicleItem({models, type, price, licensePlate, status}) {
+function VehicleItem({models, type, price, licensePlate, status,vehicle_link}) {
 
   const navigte=useNavigate();
   return (
@@ -12,7 +12,8 @@ function VehicleItem({models, type, price, licensePlate, status}) {
       <div class="card-container">
       <div class="card">
             <div class="card-image">
-                {/* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg/1200px-2019_Maruti_Suzuki_Wagon_R_%28India%29.jpg" alt="Wagon R"/> */}
+             
+                <img src={vehicle_link+"/image"} class="card-img-top vehicleImage" alt="..." />
             </div>
             <div class="card-details">
                 <h3>Vehicle type: {type}</h3>

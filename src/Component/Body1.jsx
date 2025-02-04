@@ -11,8 +11,8 @@ function Body1() {
       <h3 class="section__subheader">CONVENIENT INTERACTION</h3>
       <h2 class="section__header">Modern App</h2>
       <p class="section__description">
-        At Premium Car Rental, we redefine the car rental experience in New
-        York with our unparalleled commitment to quality and luxury. Whether
+        At Premium Car Rental, we redefine the car rental experience in Mumbai 
+        with our unparalleled commitment to quality and luxury. Whether
         you're exploring the city for business or leisure, our fleet of
         high-end vehicles ensures a sophisticated and comfortable ride.
       </p>

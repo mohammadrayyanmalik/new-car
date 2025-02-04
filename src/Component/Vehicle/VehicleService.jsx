@@ -35,8 +35,45 @@ export const deletevehicle=(vehicle_id_link)=>{
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(vehicle)
       })
-    //   .then((data) => data.json())
-    //     .then((data) => data);
+      .then((data) => data.json())
+        .then((data) => data);
   }
+
+  export const uploadVehicleImage=(vehicle_link,file)=>{
+    let formData= new FormData();
+    formData.append("vehicleImage",file)
+
+    return fetch(vehicle_link+"/image",{
+      method:"POST",
+      body:formData
+    })
+    .then(data=>data.text())
+    .then(data=>data)
+
+}
+export const getVehicleAtoZ = () => {
+  return fetch("http://localhost:8080/vehicles/search/findByOrderByModelsAsc")
+    .then((data) => data.json())
+    .then((data) => {
+      return data._embedded.vehicles;
+    });
+};
+
+export const getVehicleZtoA = () => {
+  return fetch("http://localhost:8080/vehicles/search/findByOrderByModelsDesc")
+    .then((data) => data.json())
+    .then((data) => {
+      return data._embedded.vehicles;
+    });
+};
+
+
+  export const getVehicleStatusAvailable = (status) => {
+  return fetch(`http://localhost:8080/vehicles/search/findByStatus?status=${status}`)
+    .then((data) => data.json())
+    .then((data) => {
+      return data._embedded.vehicles;
+    });
+};
 
 

@@ -62,7 +62,7 @@ function Registration() {
         <button type="submit" >Register</button>
 
         <div class="login-link">
-            <p>Don't have an account? <a href="#" onClick={()=>{navigate("/login")}}>Login here</a></p>
+            <p>Don't have an account? <a href="#" onSubmit={()=>{navigate("/login")}}>Login here</a></p>
         </div>
     </form>
 </div>

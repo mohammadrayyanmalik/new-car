@@ -13,6 +13,7 @@ import Login from './Component/Login';
 import LocationDetails from './Component/LocationDetails';
 import AdminVehicleForm from './Component/Admin/AdminVehicleForm';
 import AdminVehicle from './Component/Admin/AdminVehicle';
+import AboutUs from './Component/AboutUs';
 
 
 
@@ -57,6 +58,14 @@ const route=createBrowserRouter([
     element:<>
     <Navbar/>
    <AdminVehicle/>
+    </>
+  },
+
+  {
+    path:"/about-us",
+    element:<>
+    <Navbar/>
+   <AboutUs/>
     </>
   },
 

@@ -23,7 +23,7 @@ function Body2() {
         Explore our exclusive collection of luxury vehicles, designed to offer
         unmatched comfort, style, and performance. From elegant sedans to
         powerful SUVs, our fleet is perfect for every occasion, ensuring a
-        premium driving experience in New York.
+        premium driving experience in Mumbai.
       </p>
       <div class="fleet__wrapper-1">
         <div class="fleet__images">

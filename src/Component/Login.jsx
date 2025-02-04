@@ -10,7 +10,7 @@ function Login() {
         <form>
             <input type="text" placeholder="Username" required/>
             <input type="password" placeholder="Password" required/>
-            <button type="submit" onClick={()=>{navigate("/locationDetails")}}>Login</button>
+            <button type="submit" onSubmit={()=>{navigate("/locationDetails")}}>Login</button>
         </form>
         <div class="register-link">
             <p>Don't have an account? <a href="#" onClick={()=>{navigate("/registration")}}>Register here</a></p>

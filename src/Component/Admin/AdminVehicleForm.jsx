@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { addVehicle, updateVehicle } from "../Vehicle/VehicleService";
+import { addVehicle, updateVehicle, uploadVehicleImage } from "../Vehicle/VehicleService";
 
-function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle}) {
+function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle,setSelectedAdminvehicle}) {
   let [adminVehicles, setAdminVehicles] = useState({
     id: "",
     models: "",
@@ -21,6 +21,9 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
       licensePlate: e.target.licensePlate.value,
       status: e.target.status.value,
     }).then((data) => {
+      uploadVehicleImage(data._links.self.href,e.target.vehicleImage.files[0])
+      .then(data=>data)
+      
       onAddvehicle();
       setAdminVehicles({
         id: "",
@@ -31,7 +34,8 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
         status: "",
       });
 
-      return data;
+  
+     
     });
   };
 
@@ -43,12 +47,11 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
   }, [selectedAdminVahicle]);
 
 
-
+  //   TO control change in input box
   const handleChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     let{name,value}=e.target;
-    console.log(name+" "+value);
-
+    // console.log(name+" "+value);
     setAdminVehicles((preVehicle)=>{
         return{...preVehicle,[name]:value}
     })
@@ -62,8 +65,11 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
             type:e.target.type.value,
             price:e.target.price.value,
             licensePlate:e.target.licensePlate.value,
-            status:e.target.status.value
+            status:e.target.status.value,
+            vehicleImage:e.target.vehicleImage.value
  }).then((data)=>{
+  uploadVehicleImage(data._links.self.href,e.target.vehicleImage.files[0])
+
     onAddvehicle();
     setAdminVehicles({
         id: "",
@@ -73,6 +79,10 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
         licensePlate: "",
         status: "",
     })
+
+    setSelectedAdminvehicle(null);
+
+    
  })
   }
 
@@ -94,8 +104,10 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
             name="models"
             value={adminVehicles.models}
             onChange={handleChange}
+            required
           />
         </div>
+        {/* vehicle Type */}
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Vehicle Type
@@ -108,8 +120,10 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
             name="type"
             value={adminVehicles.type}
             onChange={handleChange}
+            required
           />
         </div>
+        {/* vehicle Price */}
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Vehicle Price
@@ -120,10 +134,13 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             name="price"
-            value={adminVehicles.type}
+            value={adminVehicles.price}
             onChange={handleChange}
+            required
+
           />
         </div>
+        {/*   Vehicle licence Number */}
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Vehicle licence Number
@@ -136,8 +153,11 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
             name="licensePlate"
             value={adminVehicles.licensePlate}
             onChange={handleChange}
+            required
+
           />
         </div>
+        {/*  Vehicle status */}
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Vehicle status
@@ -150,6 +170,26 @@ function AdminVehicleForm({ onAddvehicle,selectedAdminVahicle ,onUpdateVehicle})
             name="status"
             value={adminVehicles.status}
             onChange={handleChange}
+            required
+
+          />
+        </div>
+        
+
+         {/* Vehicle Image */}
+         <div className="mb-3">
+          <label for="exampleInputEmail1" className="form-label">
+           Vehicle Image
+          </label>
+          <input
+            type="file"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="vehicleImage"
+            onChange={handleChange}
+            required
+
           />
         </div>
         {/* Button to submit vehicle */}

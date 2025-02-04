@@ -9,9 +9,9 @@ function Header() {
         <img src={header} alt="header"/>
       </div>
       <div class="header__content">
-        <h1>Premium Car Rental In New York</h1>
+        <h1>Premium Car Rental In Mumbai</h1>
         <p class="section__description">
-          Discover the ultimate car rental experience in New York with Premium
+          Discover the ultimate car rental experience in Mumbai with Premium
           Car Rental. We offer a wide range of luxury vehicles, exceptional
           customer service, and seamless booking options to make your journey
           unforgettable.

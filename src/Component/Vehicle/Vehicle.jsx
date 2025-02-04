@@ -37,6 +37,7 @@ function Vehicle() {
                                 price={v.price}
                                 licensePlate={v.licensePlate}
                                 status={v.status}
+                                vehicle_link={v._links.self.href}
 
                             />
                         )
